@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+:root {
+  --cl-primary: #1d4ed8;
+  --cl-secondary: #a0a3bd;
+  --cl-important: #d00707;
+  --cl-active: #00ba88;
+  --cl-title-info: #4e4b66;
+  --cl-title-info-sc: #aaaaaa;
+  --cl-white: #ffffff;
+  --cl-background: #f5f6f8;
+
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+  --font-black: 900;
+
+  --ff-primary: "Mulish", serif;
+  --ff-secondary: "Inter", serif;
+  --ff-nunito: "Nunito", serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  border: none;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: var(--ff-primary);
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 7%;
+}
+footer {
+  padding: 2rem 7%;
+}
+section {
+  padding: 2rem 7%;
+}
+header > nav {
+  display: flex;
+  gap: 8rem;
+  align-items: center;
+}
+header > nav > a {
+  font-size: 1.4rem;
+  line-height: 20px;
+  letter-spacing: 0%;
+  color: #0f172a;
+}
+header > nav > a:hover {
+  color: var(--cl-primary);
+  transition: 0.2s;
+}
+header > div:last-child {
+  display: flex;
+  gap: 1rem;
+}
+header > div:last-child button {
+  cursor: pointer;
+}
+header > div:last-child button:hover {
+  font-weight: var(--font-semibold);
+}
+header > div:last-child button:not(:first-child) {
+  padding: 12px 18px;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+  border-radius: 5px;
+}
+header > div:last-child button:not(:last-child) {
+  background-color: transparent;
+}
+header > div:last-child button:nth-child(2) {
+  color: var(--cl-primary);
+  border: 1px solid var(--cl-primary);
+}
+
+header > div:last-child button:last-child {
+  background-color: var(--cl-primary);
+  color: var(--cl-white);
+}
+
+header > div:nth-child(1) > img:nth-child(2) {
+  display: none;
+}
+
+header > nav {
+  display: none;
+}
+header > div:last-child > button:not(:first-child) {
+  display: none;
+}
+
+/* text */
+
+h1,
+h2 {
+  font-size: 3.2rem;
+  line-height: 45px;
+  letter-spacing: 1px;
+  font-weight: var(--font-bold);
+}
+
+h3 {
+  font-size: 1.8rem;
+  line-height: 34px;
+  letter-spacing: 0.75px;
+  font-weight: var(--font-bold);
+}
+h4 {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  letter-spacing: 0px;
+}
+h5 {
+  font-size: 16px;
+  font-weight: var(--font-semibold);
+  line-height: 28px;
+  letter-spacing: 0.75px;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 32px;
+  letter-spacing: 0.75px;
+  font-weight: var(--font-normal);
+}
+
+footer > div > div:nth-child(3) > div > div:first-child > img {
+  width: 80.3px;
+}
+footer > div > div:nth-child(3) > div > div:nth-child(2) > img {
+  width: 105px;
+}
+footer > div > div:nth-child(3) > div > div:last-child > img {
+  width: 77.3px;
+}

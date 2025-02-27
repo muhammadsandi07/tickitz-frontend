@@ -288,5 +288,74 @@ footer > div > div:last-child > div span {
 footer > div:first-child {
   margin-bottom: 3.4rem;
 }
-footer > div:last-child {
+
+@media screen and (min-width: 768px) {
+  .hero {
+    display: flex;
+    align-items: center;
+  }
+  .hero h1,
+  .hero h3,
+  .hero p,
+  .choose-us h3,
+  .choose-us h2 {
+    text-align: left;
+  }
+
+  .hero > div:first-child {
+    text-align: left;
+    flex: 1.5;
+  }
+  .hero > div:last-child {
+    flex: 1;
+  }
+  .hero > div:last-child > div {
+    grid-template-columns: repeat(2, 217px);
+    grid-template-rows: 170px 80px 170px;
+  }
+  .hero > div:last-child > div > div:nth-child(1) > img {
+    width: 217px;
+    height: 170px;
+  }
+  .hero > div:last-child > div > div:nth-child(2) > img {
+    width: 217px;
+    height: 250px;
+  }
+  .hero > div:last-child > div > div:nth-child(3) > img {
+    width: 217px;
+    height: 250px;
+  }
+  .hero > div:last-child > div > div:nth-child(4) > img {
+    width: 218px;
+    height: 170px;
+  }
+  .choose-us h2 {
+    width: 638px;
+    margin: 14px 0 24px;
+  }
+  .choose-us > div:last-child {
+    flex-direction: row;
+  }
+  .choose-us > div:nth-child(3) > div {
+    align-items: start;
+    text-align: left;
+  }
+  .choose-us > div:nth-child(3) > div > div {
+    margin-bottom: 10px;
+  }
+
+  .subcribe h2 {
+    font-size: 48px;
+    line-height: 50px;
+  }
+  .subcribe form {
+    display: flex;
+    flex-direction: row;
+    font-weight: var(--font-normal);
+    gap: 11px;
+  }
+  .subcribe form > input,
+  .subcribe form > button {
+    flex: 1;
+  }
 }

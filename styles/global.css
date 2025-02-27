@@ -152,3 +152,29 @@ footer > div > div:nth-child(3) > div > div:nth-child(2) > img {
 footer > div > div:nth-child(3) > div > div:last-child > img {
   width: 77.3px;
 }
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 48px;
+    font-weight: var(--font-medium);
+    line-height: 70px;
+    letter-spacing: 1px;
+  }
+
+  header > div:first-child > img:first-child {
+    display: none;
+  }
+  header > div:first-child > img:last-child {
+    display: block;
+  }
+  header > nav {
+    display: flex;
+    gap: 60px;
+  }
+  header > div:last-child > button:first-child {
+    display: none;
+  }
+  header > div:last-child > button:not(:first-child) {
+    display: block;
+  }
+}

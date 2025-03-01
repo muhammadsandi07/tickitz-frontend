@@ -37,6 +37,8 @@ html {
 body {
   font-family: var(--ff-primary);
   overflow-x: hidden;
+  max-width: 1366px;
+  margin: auto;
 }
 
 header {
@@ -44,6 +46,10 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 2rem 7%;
+}
+
+main {
+  margin-bottom: 64px;
 }
 footer {
   padding: 2rem 7%;
@@ -143,6 +149,127 @@ p {
   font-weight: var(--font-normal);
 }
 
+.card {
+  scroll-snap-align: start;
+  border-radius: 30px;
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card h3 {
+  text-align: left;
+  color: #14142b;
+  margin: 19px 24px 11px 0px;
+}
+.card > p:nth-child(3) {
+  color: var(--cl-primary);
+  font-weight: var(--font-bold);
+  margin-bottom: 11px;
+}
+.card > div:first-child::before {
+  content: "Recomended";
+  position: absolute;
+  width: 135px;
+  height: 25px;
+  top: 9px;
+  left: -9px;
+  background-color: var(--cl-primary);
+  color: var(--cl-white);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+}
+.card > div:first-child::after {
+  content: "";
+  width: 11px;
+  height: 10px;
+  background-color: var(--cl-primary);
+  position: absolute;
+  top: 28.3px;
+  left: -7.2px;
+  transform: rotate(30deg);
+  z-index: -1;
+}
+.card > div:last-child {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.card > div:last-child > p {
+  padding: 12px 25px;
+  color: #a0a3bd;
+  background-color: #a0a3bd1a;
+  border-radius: 20px;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+}
+.card > div:first-child {
+  width: 264px;
+  height: 405px;
+  position: relative;
+}
+.card > div:first-child > div:last-child {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  border-radius: 20px;
+}
+
+.card > div:first-child > div:last-child button {
+  width: 188px;
+  height: 48px;
+  position: absolute;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.card > div:first-child > div:last-child button:first-child {
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  border: 1px solid var(--cl-white);
+  color: var(--cl-white);
+}
+.card > div:first-child > div:last-child button:first-child:hover {
+  border-color: var(--cl-primary);
+  transition: 0.1s;
+}
+.card > div:first-child > div:last-child button:last-child {
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--cl-primary);
+  border: 1px solid var(--cl-primary);
+  color: var(--cl-white);
+}
+.card > div:first-child > div:last-child button:last-child:hover {
+  border-color: var(--cl-white);
+  color: white;
+  transition: 0.1s;
+}
+
+.card > div:first-child:hover div:last-child {
+  display: block;
+}
+.card > div:first-child:hover::before,
+.card > div:first-child:hover::after {
+  display: none;
+}
+
 footer > div > div:nth-child(3) > div > div:first-child > img {
   width: 80.3px;
 }
@@ -153,12 +280,55 @@ footer > div > div:nth-child(3) > div > div:last-child > img {
   width: 77.3px;
 }
 
+footer p {
+  font-size: 1.4rem;
+  line-height: 24px;
+  font-weight: var(--font-normal);
+  letter-spacing: 0.75px;
+  color: #6e7191;
+}
+footer > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+footer > div div {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 12px;
+}
+
+footer > div > div:first-child > img:first-child {
+  display: none;
+}
+footer > div > div > div {
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2.4rem;
+  align-items: center;
+}
+footer > div > div:last-child > div span {
+  display: none;
+}
+
+footer > div:first-child {
+  margin-bottom: 3.4rem;
+}
+
 @media screen and (min-width: 768px) {
   h1 {
     font-size: 48px;
     font-weight: var(--font-medium);
     line-height: 70px;
     letter-spacing: 1px;
+  }
+  main {
+    margin-bottom: 109px;
+  }
+  header {
+    border-bottom: 1px solid #dedede;
   }
 
   header > div:first-child > img:first-child {
@@ -176,5 +346,70 @@ footer > div > div:nth-child(3) > div > div:last-child > img {
   }
   header > div:last-child > button:not(:first-child) {
     display: block;
+  }
+  footer > div:first-child {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  footer > div:first-child > div:first-child {
+    flex-basis: 300px;
+  }
+  footer > div:first-child > div:first-child > img:nth-child(1) {
+    display: block;
+  }
+  footer > div:first-child > div:first-child > img:nth-child(2) {
+    display: none;
+  }
+  footer > div:first-child > div:first-child p {
+    font-size: 1.6rem;
+    line-height: 32px;
+  }
+  footer > div:first-child > div:not(:first-child) h5 {
+    margin-bottom: 30px;
+  }
+  footer > div:first-child > div:nth-child(2) div {
+    align-items: start;
+    flex-direction: column;
+    gap: 14px;
+  }
+  footer > div:first-child > div:nth-child(2) p {
+    text-align: left;
+    line-height: 17.57px;
+    letter-spacing: 0.5px;
+  }
+  footer > div:first-child > div:nth-child(3) div {
+    flex-direction: column;
+    align-items: start;
+  }
+  footer > div:first-child > div:nth-child(3) > div > div:first-child > img {
+    width: 120px;
+    height: 44px;
+  }
+  footer > div:first-child > div:nth-child(3) > div > div:nth-child(2) > img {
+    width: 174px;
+    height: 27px;
+  }
+  footer > div:first-child > div:nth-child(3) > div > div:nth-child(3) > img {
+    width: 80px;
+    height: 25px;
+  }
+  footer > div:first-child > div:nth-child(4) > div:nth-child(2) {
+    flex-direction: column;
+    align-items: start;
+  }
+  footer > div:first-child > div:nth-child(4) > div:nth-child(2) div {
+    flex-direction: row;
+    align-items: center;
+  }
+  footer > div:first-child > div:nth-child(4) span {
+    font-size: 1.4rem;
+    font-weight: var(--font-semibold);
+    line-height: 17.57px;
+    letter-spacing: 0.5px;
+    display: inline;
+  }
+  footer > div:last-child p {
+    width: 100%;
+    text-align: center;
   }
 }

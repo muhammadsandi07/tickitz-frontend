@@ -1,0 +1,232 @@
+body {
+  background-image: url(../images/bg-sign.png);
+  background-size: cover;
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  position: relative;
+  padding: 56px 25px 139px;
+}
+body::before {
+  content: "";
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+}
+header {
+  background-color: transparent;
+  position: relative;
+  z-index: 1;
+}
+
+header img {
+  width: 85px;
+  height: 31.88px;
+  margin: auto;
+}
+.line-proggress {
+  display: none;
+}
+main {
+  padding: 52px 10px;
+  position: relative;
+  z-index: 1;
+  border-radius: 8px;
+  max-width: 327px;
+  margin: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+form > div {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+}
+
+label {
+  font-size: 1.6rem;
+  line-height: 20.08px;
+  letter-spacing: 0;
+  font-weight: var(--font-normal);
+  color: #4e4b66;
+}
+input {
+  font-size: 1.6rem;
+  line-height: 20.08px;
+  letter-spacing: 0;
+  font-weight: var(--font-normal);
+  color: #a0a3bd;
+  letter-spacing: 0.75px;
+  padding: 14px 20px;
+}
+
+form > div:nth-child(3) {
+  flex-direction: row;
+  display: none;
+}
+
+form > div:first-child > input {
+  border: 1px solid #dedede;
+}
+form > div:nth-child(2) > div {
+  display: flex;
+  padding-inline: 20px;
+  justify-content: space-between;
+  border: 1px solid #dedede;
+}
+form > div:nth-child(2) > div > input {
+  padding-left: 0;
+}
+form > button:nth-child(4) {
+  height: 48px;
+  background-color: var(--cl-primary);
+  color: var(--cl-white);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.75px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+form > p:nth-child(5) {
+  text-align: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20.08px;
+  letter-spacing: 0.5%;
+  color: #6e7191;
+}
+form > p:nth-child(5) > a {
+  color: var(--cl-primary);
+}
+
+section:nth-child(3) > div:first-child {
+  display: flex;
+  gap: 40px;
+}
+section:nth-child(3) {
+  padding-inline: 0;
+}
+section:nth-child(3) > div:first-child > div:not(:nth-child(2)) {
+  border-bottom: 1px solid #dedede;
+  flex: 1;
+  width: 100%;
+  height: 8px;
+}
+section:nth-child(3) > div:first-child > p {
+  font-family: var(--ff-secondary);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14.52px;
+  letter-spacing: 0.5%;
+  color: #aaaaaa;
+}
+
+section:nth-child(3) > div:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  margin-top: 25px;
+}
+
+section:nth-child(3) > div:last-child > div {
+  width: 64px;
+  height: 64px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section:nth-child(3) > div:last-child > div > button {
+  background-color: transparent;
+}
+section:nth-child(3) > div:last-child > div > button > img {
+  width: 24px;
+  height: 24px;
+}
+section:nth-child(3) > div:last-child > div > button > p {
+  display: none;
+}
+
+main > div:first-child,
+main > div:first-child h2 {
+  margin-bottom: 25px;
+}
+main > div:first-child h2 {
+  font-family: var(--ff-secondary);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24.2px;
+  letter-spacing: 0.3%;
+}
+main > div:first-child > p {
+  font-family: var(--ff-secondary);
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 21.78px;
+  letter-spacing: 0.7px;
+  color: #a0a3bd;
+}
+
+form > div:nth-child(3) {
+  display: flex;
+  justify-content: end;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    display: flex;
+    border: none;
+    margin-bottom: 0;
+    padding: 0;
+  }
+  header img {
+    width: 276px;
+    height: 104px;
+  }
+  main {
+    max-width: 546px;
+    height: 756px;
+    margin: auto;
+    padding: 35px 73px;
+  }
+  .line-proggress {
+    display: block;
+  }
+  form > div:nth-child(3) {
+    display: flex;
+    gap: 24px;
+  }
+  form > button:nth-child(4) {
+    height: 64px;
+  }
+
+  section:nth-child(3) > div:last-child > div {
+    width: 182px;
+    height: 64px;
+    border-radius: 4px;
+  }
+  section:nth-child(3) > div:last-child > div > button {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding-left: 24px;
+    gap: 24px;
+  }
+  section:nth-child(3) > div:last-child > div > button > p {
+    display: block;
+    font-weight: var(--font-normal);
+    font-size: 18px;
+    line-height: 22.59px;
+    letter-spacing: 0.5%;
+    text-align: center;
+    color: #a0a3bd;
+  }
+}

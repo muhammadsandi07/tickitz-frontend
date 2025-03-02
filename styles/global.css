@@ -36,9 +36,9 @@ html {
 }
 body {
   font-family: var(--ff-primary);
-  overflow-x: hidden;
   max-width: 1366px;
   margin: auto;
+  border: 1px solid #dedede;
 }
 
 header {
@@ -46,13 +46,16 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 2rem 7%;
+  background-color: var(--cl-white);
 }
 
 main {
   margin-bottom: 64px;
+  background-color: var(--cl-white);
 }
 footer {
   padding: 2rem 7%;
+  background-color: var(--cl-white);
 }
 section {
   padding: 2rem 7%;
@@ -112,7 +115,9 @@ header > nav {
 header > div:last-child > button:not(:first-child) {
   display: none;
 }
-
+footer {
+  display: none;
+}
 /* text */
 
 h1,
@@ -270,6 +275,54 @@ p {
   display: none;
 }
 
+/* line proggress */
+.line-proggress > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 31px;
+}
+.line-proggress > div > div:nth-child(odd) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 130px;
+}
+.line-proggress > div > div:nth-child(odd) p {
+  font-size: 14px;
+  line-height: 17.57px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.line-proggress > div > div:nth-child(even) {
+  width: 80px;
+  height: 0px;
+  border-bottom: 2px dashed #a0a3bd;
+}
+.line-proggress > div > div:nth-child(odd) > div {
+  width: 47px;
+  height: 47px;
+  background-color: #a0a3bd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: var(--font-medium);
+  line-height: 20.08px;
+  letter-spacing: 0%;
+  color: var(--cl-white);
+}
+
+.line-proggress > div div > div.success {
+  background-color: #008000;
+}
+.line-proggress > div div > div.process {
+  background-color: var(--cl-primary);
+}
+
 footer > div > div:nth-child(3) > div > div:first-child > img {
   width: 80.3px;
 }
@@ -345,6 +398,9 @@ footer > div:first-child {
     display: none;
   }
   header > div:last-child > button:not(:first-child) {
+    display: block;
+  }
+  footer {
     display: block;
   }
   footer > div:first-child {

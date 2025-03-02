@@ -245,7 +245,7 @@ button {
   cursor: pointer;
 }
 .card > div:first-child > div:last-child button:first-child {
-  top: 40%;
+  top: 44%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: transparent;

@@ -1,6 +1,3 @@
-body {
-  background-color: #a0a3bd33;
-}
 .line-proggress {
   display: none;
 }
@@ -123,7 +120,9 @@ section:nth-child(3) > button:last-child {
   background-color: var(--cl-primary);
   border-radius: 4px;
 }
-
+section:nth-child(3) button {
+  color: #000;
+}
 .container-title {
   display: flex;
   align-items: center;
@@ -207,6 +206,7 @@ p.title {
   background-color: var(--cl-primary);
   border-radius: 4px;
 }
+
 a {
   text-align: center;
   font-size: 1.6rem;
@@ -220,9 +220,18 @@ section:last-child {
   display: none;
 }
 
+section:nth-child(3) > button:last-child:hover {
+  background-color: white;
+  transition: 0.2s;
+  color: var(--cl-primary);
+  border: 1px solid var(--cl-primary);
+}
 @media screen and (min-width: 768px) {
   .line-proggress {
     display: block;
+  }
+  body {
+    background-color: #a0a3bd33;
   }
   main {
     width: 732px;

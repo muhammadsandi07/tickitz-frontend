@@ -153,6 +153,9 @@ p {
   letter-spacing: 0.75px;
   font-weight: var(--font-normal);
 }
+button {
+  cursor: pointer;
+}
 
 .card {
   scroll-snap-align: start;

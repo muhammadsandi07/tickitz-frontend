@@ -132,4 +132,9 @@ footer {
   main > section:first-child {
     height: auto;
   }
+  section:first-child > div:last-child img {
+    position: relative;
+    z-index: 2;
+    transform: rotate(0deg);
+  }
 }

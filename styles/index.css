@@ -1,0 +1,191 @@
+.hero {
+  width: 100%;
+  background-image: url(../images/hero.png);
+  padding-block: 104px;
+  position: relative;
+}
+.hero::after {
+  content: "";
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+}
+
+h1,
+h3 {
+  position: relative;
+  z-index: 1;
+  color: var(--cl-white);
+}
+.hero h1 {
+  width: 638px;
+}
+.hero > img:last-child {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  z-index: 1;
+}
+
+.movie > div:first-child > div > form > label {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 20.08px;
+  letter-spacing: 0%;
+  color: var(--cl-title-info);
+  margin-bottom: 12px;
+}
+.movie > div:first-child {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 55px;
+}
+
+.movie > div:first-child > div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+.movie > div:first-child > div:last-child > p {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 20.08px;
+  letter-spacing: 0%;
+  color: var(--cl-title-info);
+  margin-bottom: 24px;
+}
+.movie > div:first-child > div:last-child > div:last-child > button {
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: var(--font-semibold);
+  line-height: 20px;
+  letter-spacing: 0px;
+  background-color: transparent;
+  border-radius: 10px;
+  color: #4e4b66;
+}
+.movie > div:first-child > div:last-child > div:last-child > button:hover {
+  background-color: var(--cl-primary);
+  color: var(--cl-white);
+}
+.movie > .movie > div:first-child > div > form > div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  width: 340px;
+  padding: 21px 12px;
+  gap: 15px;
+  border: 1px solid #dedede;
+  border-radius: 4px;
+  margin-top: 12px;
+}
+.movie > div:first-child > div > form > div {
+  border: 1px solid #dedede;
+  border-radius: 4px;
+  display: flex;
+  padding: 21px 4px 23px 12px;
+  margin-top: 12px;
+  gap: 15px;
+}
+.movie > div:first-child > div > form > div:nth-child(2) input {
+  font-size: 1.6rem;
+  font-weight: var(--font-normal);
+  line-height: 20.08px;
+  letter-spacing: 0.75px;
+  color: #a0a3bd;
+}
+.movie > div:first-child > div > form > div:nth-child(2) input::placeholder {
+  font-size: 1.6rem;
+  font-weight: var(--font-normal);
+  line-height: 20.08px;
+  letter-spacing: 0.75px;
+  color: #a0a3bd;
+}
+.movie > div:nth-child(2) > div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 264px);
+  gap: 39px 20px;
+  justify-content: center;
+}
+.movie > div:last-child {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 63px;
+}
+.movie > div:last-child button {
+  width: 40px;
+  height: 40px;
+  font-size: 1.6rem;
+  line-height: 20px;
+  font-weight: var(--font-medium);
+  font-family: var(--ff-nunito);
+  letter-spacing: 0px;
+  border-radius: 50%;
+  color: #a0a3bd;
+}
+.movie > div:last-child button:hover {
+  background-color: var(--cl-primary);
+  color: var(--cl-white);
+}
+
+.movie > div:last-child button:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cl-primary);
+  color: var(--cl-white);
+}
+
+.subcribe > div {
+  background-color: var(--cl-primary);
+  padding: 61px 36px;
+  border-radius: 20px;
+  position: relative;
+  height: 536px;
+}
+.subcribe > div > div:last-child {
+  width: 237px;
+  height: 237px;
+  border: 7px solid var(--cl-white);
+  border-radius: 50%;
+  position: absolute;
+  right: -115px;
+  bottom: -150px;
+}
+
+.subcribe h2 {
+  text-align: center;
+  color: var(--cl-white);
+  font-weight: var(--font-normal);
+  font-size: 32px;
+  margin-bottom: 37px;
+}
+.subcribe form {
+  display: flex;
+  flex-direction: column;
+}
+.subcribe form > input {
+  background-color: #2563eb;
+  border: 1px solid #d4d4d8;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  line-height: 26px;
+  letter-spacing: 0;
+  font-weight: var(--font-normal);
+}
+.subcribe form > input::placeholder {
+  color: var(--cl-white);
+}
+.subcribe form > input,
+.subcribe form > button {
+  padding: 16px 12px;
+  margin-bottom: 11px;
+}
+.subcribe form > button {
+  background-color: var(--cl-white);
+  color: var(--cl-primary);
+  font-size: 18px;
+  font-weight: var(--font-bold);
+  line-height: 28px;
+  letter-spacing: -0.2px;
+  border-radius: 9px;
+}

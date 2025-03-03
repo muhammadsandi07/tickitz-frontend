@@ -229,6 +229,7 @@
 .movies > div:nth-child(3) > div > div > div:last-child {
   display: flex;
 }
+
 @media screen and (min-width: 768px) {
   .hero {
     display: flex;
@@ -337,5 +338,12 @@
   .subcribe form input,
   .subcribe form > button {
     width: 230px;
+  }
+  .subcribe form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-weight: var(--font-normal);
+    gap: 11px;
   }
 }
